@@ -18,19 +18,6 @@ set number relativenumber
 " Don't use Ex mode, use Q for formatting.
 map Q gq
 
-" --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
-
-" Highlight copied text
-Plug 'machakann/vim-highlightedyank'
-" Commentary plugin
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-surround'
-Plug 'preservim/nerdtree'
-
-let g:NERDTreeMapActivateNode='l'
-let g:NERDTreeMapJumpParent='h'
-
-
 let mapleader = " "
 
 nmap <S-Enter> O<Esc>
