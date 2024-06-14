@@ -11,10 +11,15 @@ set scrolloff=10
 
 " Do incremental searching.
 set incsearch
+set ignorecase
 
 set number relativenumber
 set idearefactormode=keep
 set ideajoin
+set ideamarks
+set hlsearch
+
+set clipboard+=unnamedplus
 
 " Don't use Ex mode, use Q for formatting.
 map Q gq
@@ -27,32 +32,15 @@ Plug 'machakann/vim-highlightedyank'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'preservim/nerdtree'
+Plug 'michaeljsmith/vim-indent-object'
 
+" Nerd Tree keymaps
 let g:NERDTreeMapActivateNode='l'
 let g:NERDTreeMapJumpParent='h'
 
 "" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
 
 let mapleader = " "
-
-nmap <S-Enter> O<Esc>
-nmap <CR> o<Esc>
-
-" system clipboard
-" changed from "+ to "* in version 2.5.0
-vmap <leader>y "*y
-vmap <leader>d "*d
-nmap <leader>y "*yy
-nmap <leader>p "*p
-nmap <leader>P "*P
-vmap <leader>p "*p
-vmap <leader>P "*P
-
-" scrolling
-nmap <leader>d <C-d>
-nmap <leader>u <C-u>
-vmap <leader>d <C-d>
-vmap <leader>u <C-u>
 
 " actions
 nmap <leader>h <action>(PreviousTab)
@@ -79,6 +67,3 @@ nmap <leader>f <Action>(GotoFile)
 :map <leader>m <Action>(ToggleBookmarkWithMnemonic)
 
 :map <leader>t <Action>(ActivateTerminalToolWindow)
-
-let g:NERDTreeMapActivateNode='l'
-let g:NERDTreeMapJumpParent='h'
