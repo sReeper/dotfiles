@@ -12,7 +12,7 @@ return {
         javascriptreact = { 'eslint_d' },
         typescriptreact = { 'eslint_d' },
         kotlin = { 'ktlint' },
-        python = { 'ruff', 'mypy' },
+        python = { 'ruff' },
       }
 
       -- Create autocommand which carries out the actual linting
