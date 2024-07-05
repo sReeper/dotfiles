@@ -70,13 +70,14 @@ nmap <c-v> <Action>(SplitVertically)
 map gs <Action>(JumpToLastChange)
 map gl <Action>(JumpToNextChange)
 map gu <Action>(ShowUsages)
-map gi <Action>(GotoImplemenation)
+map gi <Action>(GotoImplementation)
 map gt <Action>(GotoTest)
 
 nmap <leader>jd <Action>(QuickJavaDoc)
 nmap <leader>p <Action>(ParameterInfo)
 nmap <leader>r <Action>(Refactorings.QuickListPopupAction)
-nmap <leader>z <Action>(ToggleZenMode)
+nmap <leader>mz <Action>(ToggleZenMode)
+nmap <leader>mp <Action>(TogglePresentationMode)
 
 nmap <leader>m <Action>(ToggleBookmarkWithMnemonic)
 
