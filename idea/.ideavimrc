@@ -12,6 +12,9 @@ set scrolloff=10
 " Do incremental searching.
 set incsearch
 set ignorecase
+set smartcase
+
+set cursorline
 
 set number relativenumber
 set idearefactormode=keep
@@ -45,25 +48,38 @@ let mapleader = " "
 " actions
 nmap <leader>h <action>(PreviousTab)
 nmap <leader>l <action>(NextTab)
-nmap <leader>q <action>(CloseEditor)
+nmap <leader>q <action>(ToggleRenderedDocPresentation)
 nmap <leader>i <action>(Generate)
 nmap <leader>g <action>(Git.Menu)
 nmap <leader>/ <action>(ShowErrorDescription)
 nmap <leader>e <action>(GotoNextError)
 nnoremap <leader><leader> <C-Tab>
 
-nmap <leader>k <Action>(MethodUp)
-nmap <leader>j <Action>(MethodDown)
+nmap <M-k> <Action>(MethodUp)
+nmap <M-j> <Action>(MethodDown)
 nmap <leader>s <Action>(FileStructurePopup)
 nmap <leader>f <Action>(GotoFile)
 
+nmap <C-j> <Action>(MoveLineDown)
+xmap <C-j> <Action>(MoveLineDown)
+nmap <C-k> <Action>(MoveLineUp)
+xmap <C-k> <Action>(MoveLineUp)
+
 " splits
-:nmap <leader>v <Action>(PrevSplitter)
-:nmap <c-v> <Action>(SplitVertically)
+nmap <leader>v <Action>(PrevSplitter)
+nmap <c-v> <Action>(SplitVertically)
 
-:map gs <Action>(JumpToLastChange)
-:map gl <Action>(JumpToNextChange)
+map gs <Action>(JumpToLastChange)
+map gl <Action>(JumpToNextChange)
+map gu <Action>(ShowUsages)
+map gi <Action>(GotoImplemenation)
+map gt <Action>(GotoTest)
 
-:map <leader>m <Action>(ToggleBookmarkWithMnemonic)
+nmap <leader>jd <Action>(QuickJavaDoc)
+nmap <leader>p <Action>(ParameterInfo)
+nmap <leader>r <Action>(Refactorings.QuickListPopupAction)
+nmap <leader>z <Action>(ToggleZenMode)
 
-:map <leader>t <Action>(ActivateTerminalToolWindow)
+nmap <leader>m <Action>(ToggleBookmarkWithMnemonic)
+
+nmap <leader>t <Action>(ActivateTerminalToolWindow)
