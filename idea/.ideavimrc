@@ -55,15 +55,13 @@ nmap <leader>/ <action>(ShowErrorDescription)
 nmap <leader>e <action>(GotoNextError)
 nnoremap <leader><leader> <C-Tab>
 
-nmap <M-k> <Action>(MethodUp)
-nmap <M-j> <Action>(MethodDown)
+nmap <C-k> <Action>(MethodUp)
+nmap <C-j> <Action>(MethodDown)
 nmap <leader>s <Action>(FileStructurePopup)
 nmap <leader>f <Action>(GotoFile)
 
-nmap <C-j> <Action>(MoveLineDown)
-xmap <C-j> <Action>(MoveLineDown)
-nmap <C-k> <Action>(MoveLineUp)
-xmap <C-k> <Action>(MoveLineUp)
+xmap <A-j> <Action>(MoveLineDown)
+xmap <A-k> <Action>(MoveLineUp)
 
 " splits
 nmap <leader>v <Action>(PrevSplitter)
